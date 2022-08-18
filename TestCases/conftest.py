@@ -42,3 +42,5 @@ def browser(request):
 @pytest.fixture(scope='class', autouse = True)
 def URL(request):
     return request.config.getoption("--url")
+
+

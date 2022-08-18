@@ -1,4 +1,5 @@
 import openpyxl
+import csv
 
 def read_data_from_excel(file_address, sheetName):
     wb = openpyxl.load_workbook(filename=file_address)
@@ -13,3 +14,20 @@ def read_data_from_excel(file_address, sheetName):
             row.append(sh.cell(row=i, column=j).value)
         datalist.append(row)
     return datalist
+
+def read_data_from_CSV(file_address):
+    dataList = []
+    # open csv file
+    csvdata = open(file_address, "r")
+
+    #create a reader 
+    reader = csv.reader(csvdata)
+
+    # skip the header
+    next(reader)
+
+    #add row to the list
+    for row in reader:
+        dataList.append(row)
+    
+    return dataList
