@@ -1,0 +1,12 @@
+{
+    "test1": {
+        "email":"admin@yourstore.com",
+        "password": "admin",
+        "searchKey": "WEB API"
+    },
+    "test2": {
+        "email":"admin@yourstore.com",
+        "password": "adminn",
+        "searchKey": "WEB API"
+    }
+}
